@@ -1,5 +1,5 @@
 //  MODO DESARROLLO
-const SERVER = "";
+const SERVER = "https://danielparrillas.github.io";
 // MODO PRODUCCION
 // const SERVER = "";
 const mapElement = document.getElementById("map");
