@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/Soccer.svg" />
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+
+  <!-- Styles -->
+  <link rel=" stylesheet" href="./assets/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Espacios recreativos</title>
+</head>
+
+<body>
+  <nav>
+    <img src="./assets/img/Soccer.svg" alt="">
+    <h1>Espacios recreativos</h1>
+  </nav>
+  <main>
+    <div id="map" class=''></div>
+    <div id='map-base-control'>
+      <button id='btn-base-map'>Default</button>
+      <button id='btn-osm'>OpenStreetmap</button>
+      <div id='checks-map'>
+        <div>
+          <input type="checkbox" name="Departamentos" id="departamentos-check">
+          <label for="Departamentos">Departamentos</label>
+        </div>
+        <div>
+          <input type="checkbox" name="Municipios" id="municipios-check">
+          <label for="Municipios">Municipios</label>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/proj4"></script>
+  <script src="https://unpkg.com/georaster"></script>
+  <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
