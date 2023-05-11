@@ -13,12 +13,12 @@ btnOSM.addEventListener("click", setOpenStretMap);
 
 const MAPABASES = {
   default: {
-    url: SERVER + "/assets/map/es2.tif",
+    url: SERVER + "/sgg-espacios-recreativos/assets/map/es2.tif",
     bgColor: "#ced3af",
     title: "Default",
   },
   satelite: {
-    url: SERVER + "/assets/map/es-satelital2.tif",
+    url: SERVER + "/sgg-espacios-recreativos/assets/map/es-satelital2.tif",
     bgColor: "#746848",
     title: "Satelite",
   },
@@ -67,7 +67,7 @@ function main() {
 }
 
 function inicializarCapas() {
-  axios(`/assets/map/Espacios recreativos.geojson`)
+  axios(`/sgg-espacios-recreativos/assets/map/Espacios recreativos.geojson`)
     .then((response) => {
       // console.log(response);
       L.geoJSON(response.data, {
@@ -87,7 +87,7 @@ function inicializarCapas() {
     })
     .catch((error) => console.error(error));
 
-  axios(`/assets/map/Espacios para aprovechar.geojson`)
+  axios(`/sgg-espacios-recreativos/assets/map/Espacios para aprovechar.geojson`)
     .then((response) => {
       // console.log(response);
       L.geoJSON(response.data, {
@@ -107,7 +107,7 @@ function inicializarCapas() {
     })
     .catch((error) => console.error(error));
 
-  axios(`/assets/map/Canchas.geojson`)
+  axios(`/sgg-espacios-recreativos/assets/map/Canchas.geojson`)
     .then((response) => {
       // console.log(response);
       L.geoJSON(response.data, {
@@ -135,7 +135,7 @@ function inicializarCapas() {
     })
     .catch((error) => console.error(error));
 
-  axios(`/assets/map/Parques acuaticos.geojson`)
+  axios(`/sgg-espacios-recreativos/assets/map/Parques acuaticos.geojson`)
     .then((response) => {
       // console.log(response);
       L.geoJSON(response.data, {
@@ -167,7 +167,7 @@ function inicializarCapas() {
 function toggleDepartamentos() {
   // console.log(checkDepartamentos.checked);
   if (checkDepartamentos.checked) {
-    axios(`/assets/map/Departamentos.geojson`)
+    axios(`/sgg-espacios-recreativos/assets/map/Departamentos.geojson`)
       .then((response) => {
         console.log(response);
         departamentosLayer = L.geoJSON(response.data, {
@@ -187,7 +187,7 @@ function toggleDepartamentos() {
 function toggleMunicipios() {
   console.log(checkMunicipios.checked);
   if (checkMunicipios.checked) {
-    axios(`/assets/map/Municipios.geojson`)
+    axios(`/sgg-espacios-recreativos/assets/map/Municipios.geojson`)
       .then((response) => {
         console.log(response);
         municipiosLayer = L.geoJSON(response.data, {
