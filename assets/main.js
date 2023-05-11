@@ -1,5 +1,5 @@
 //  MODO DESARROLLO
-const SERVER = "http://127.0.0.1:5500";
+const SERVER = "";
 // MODO PRODUCCION
 // const SERVER = "";
 const mapElement = document.getElementById("map");
